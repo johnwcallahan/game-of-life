@@ -1,0 +1,43 @@
+@import "https://fonts.googleapis.com/css?family=Space+Mono";
+
+body, html {
+  background-color: #FBFBFB;
+}
+
+h1 {
+  text-align: center;
+}
+
+a {
+  font-family: "Space Mono", monospace;
+  text-decoration: none;
+  color: #2F2F2F;
+}
+
+#lifeTable {
+  min-width: 800px;
+  margin: 0 auto 0 auto;
+}
+
+#slow {
+  margin-left: 20px;
+}
+
+#fast {
+  margin-right: 20px;
+}
+
+select {
+  margin-left: 20px;
+}
+
+#generation {
+  font-family: Arial;
+  display: inline;
+  margin-left: 5px;
+}
+
+#controls {
+  width: 800px;
+  margin: 15px auto 0 auto;
+}
