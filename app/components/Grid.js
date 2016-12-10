@@ -61,7 +61,7 @@ var Grid = React.createClass({
 
   //Changes sim speed according to button press
   changeSimSpeed: function(event) {
-    var id = event.target.getAttribute("id");
+    var id = event.target.value;
     simSpeed = speedMap[id];
     this.stopSimulation();
     this.runSimulation();
@@ -137,28 +137,36 @@ var Grid = React.createClass({
 
     return (
       <div>
-        <Header />  
+        <Header />
+        <div id="gen-box">  
+          <p id="generation">Generation: {this.state.generation}</p>
+        </div>        
         <table id="lifeTable" style={tableStyle}>
           <tbody>{lifeGrid}</tbody>
         </table>
         <div id="controls">
-          <button className="btn" onClick={this.runSimulation}>Run</button>
-          <button className="btn" onClick={this.stopSimulation}>Stop</button>
-          <button className="btn" onClick={this.advanceOneGeneration}>Next</button>
-          <button className="btn" id="slow" onClick={this.changeSimSpeed}>Slow</button>
-          <button className="btn" id="medium" onClick={this.changeSimSpeed}>Medium</button>
-          <button className="btn" id="fast" onClick={this.changeSimSpeed}>Fast</button>
+          <button className="btn control" id="run" onClick={this.runSimulation}>Run</button>
+          <button className="btn control" id="step" onClick={this.advanceOneGeneration}>Step</button>          
+          <button className="btn control" id="pause" onClick={this.stopSimulation}>Pause</button>
         
-          <button className="btn" onClick={this.clearBoard}>Reset board</button>
-          <button className="btn" onClick={this.randomBoard}>Random board</button>
-
-          <select onChange={this.changeColorScheme}>
-            <option value="one">Color scheme #1</option>
-            <option value="two">Color scheme #2</option>
-            <option value="three">Color scheme #3</option>
-            <option value="four">Color scheme #4</option>
+          <button className="btn" id="reset" onClick={this.clearBoard}>Reset</button>
+          <button className="btn" id="random" onClick={this.randomBoard}>Random</button>
+         
+          <select id="speed-select" onChange={this.changeSimSpeed}>
+            <option value="slow">Slow</option>
+            <option value="medium" selected="selected">Medium</option>
+            <option value="fast">Fast</option>
           </select>
-          <p id="generation">Generation: {this.state.generation}</p>
+
+          <select id="color-scheme" 
+                  onChange={this.changeColorScheme} 
+                  style={{backgroundColor: this.state.primaryColor, 
+                          color: this.state.primaryColor == "#CACACA" ? "#2E2E2E" : "#FFFFFF"}}>
+            <option value="one">Theme #1</option>
+            <option value="two">Theme #2</option>
+            <option value="three">Theme #3</option>
+            <option value="four">Theme #4</option>
+          </select>
         </div>                                
       </div>
     )

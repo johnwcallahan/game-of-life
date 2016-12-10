@@ -1,17 +1,103 @@
 @import "https://fonts.googleapis.com/css?family=Space+Mono";
+@import url("https://fonts.googleapis.com/css?family=Nunito+Sans");
 
 body, html {
+  font-family: "Nunito sans", sans-serif;
   background-color: #FBFBFB;
 }
 
-h1 {
+#header {
   text-align: center;
 }
 
-a {
-  font-family: "Space Mono", monospace;
+#header-link {
+  text-align: center;
   text-decoration: none;
   color: #2F2F2F;
+}
+
+.btn {
+  font-size: 18px;
+  height: 40px;
+  border-width: 1px;
+  border-style: solid;
+  box-shadow: 1px 2px 3px black;
+}
+
+.btn:hover {
+  background-color: #E6E6E6;
+}
+
+.control {
+  width: 71px;
+  color: #2E2E2E;
+  background-color: #FAFAFA;
+}
+
+#run {
+  margin-left: 15px;
+  border-color: #61B01F;
+}
+
+#step {
+  margin-left: 12px;
+  border-color: #1FA9B0;
+}
+
+#pause {
+  margin-left: 12px;
+  border-color: #D20606;
+}
+
+#reset {
+  width: 101px;
+  margin-left: 44px;
+  color: #2E2E2E;
+  border-color: #D20606;
+  border-radius: 10px;
+  background-color: #FAFAFA;
+}
+
+#reset:hover {
+  background-color: #E6E6E6;
+}
+
+#random:hover {
+  background-color: #E6E6E6;
+}
+
+
+#random {
+  width: 101px;
+  margin-left: 8px;
+  color: #2E2E2E;
+  border-color: #1FA9B0;
+  border-radius: 10px;
+  background-color: #FAFAFA;
+}
+
+#speed-select {
+  font-family: "Nunito sans", sans-serif;
+  font-size: 18px;
+  width: 112px;
+  height: 40px;
+  margin-left: 44px;
+  text-align: center;
+  border-style: solid;
+  border-color: #61B01F;
+  border-radius: 10px;
+  box-shadow: 1px 2px 3px black;
+}
+
+#color-scheme {
+  font-size: 18px;
+  width: 112px;
+  height: 40px;
+  margin-left: 9px;
+  text-align: center;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 1px 2px 3px black;
 }
 
 #lifeTable {
@@ -27,14 +113,17 @@ a {
   margin-right: 20px;
 }
 
-select {
-  margin-left: 20px;
-}
-
-#generation {
-  font-family: Arial;
-  display: inline;
-  margin-left: 5px;
+#gen-box {
+  font-size: 18px;
+  line-height: 40px;
+  width: 219px;
+  height: 40px;
+  margin: 26px auto 23px auto;
+  text-align: center;
+  color: #FFFFFF;
+  border-radius: 100px;
+  background-color: #4A4949;
+  box-shadow: 1px 2px 3px black;
 }
 
 #controls {
